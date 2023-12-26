@@ -1,10 +1,10 @@
 {
-    "recommendations": [
-        "golang.go",
-        "streetsidesoftware.code-spell-checker",
-        "aaron-bond.better-comments",
-        "shardulm94.trailing-spaces",
-        "zxh404.vscode-proto3",
-        "mikestead.dotenv"
-    ]
+  "recommendations": [
+    "golang.go",
+    "streetsidesoftware.code-spell-checker",
+    "aaron-bond.better-comments",
+    "shardulm94.trailing-spaces",
+    "zxh404.vscode-proto3",
+    "mikestead.dotenv"
+  ]
 }
