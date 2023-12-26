@@ -1,7 +1,7 @@
 {
     "version": "0.2",
     "ignorePaths": [
-        "./.golangci.yml"
+        "./.golangci.yaml"
     ],
     "dictionaryDefinitions": [
         {
