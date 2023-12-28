@@ -1,5 +1,10 @@
 # Custom Dictionary Words
+aquaproj
+codespace
+Codespaces
 golangci
 gwork
+hadolint
 Inclusivity
+magefile
 Otimista
