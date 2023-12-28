@@ -20,3 +20,4 @@ packages:
 - name: rhysd/actionlint@v1.6.26
 - name: makiuchi-d/arelo@v1.13.0
 - name: koalaman/shellcheck@v0.9.0
+- name: sqlc-dev/sqlc@v1.24.0
