@@ -1,0 +1,29 @@
+# Development
+
+This document describes the process for running this application on your local computer.
+
+## Getting started
+
+It runs on macOS, Windows, and Linux environments.
+
+```shell
+git clone https://github.com/github/docs
+cd docs
+npm ci
+npm run build
+npm start
+```
+
+You should now have a running server! Visit [localhost:10012](http://localhost:10012) in your browser.
+
+When you're ready to stop your local server, type <kbd>Ctrl</kbd>+<kbd>C</kbd> in your terminal window.
+
+### Using GitHub Codespaces
+
+As an alternative, you can simply use [GitHub Codespaces](https://docs.github.com/en/codespaces/overview). For more information about using a codespace for working on GitHub documentation, see "[Working in a codespace](https://docs.github.com/en/contributing/setting-up-your-environment-to-work-on-github-docs/working-on-github-docs-in-a-codespace)."
+
+In a matter of minutes, you will be ready to edit, preview and test your changes directly from the comfort of your browser.
+
+## READMEs
+
+For more info about working with this site, check out these READMEs:
