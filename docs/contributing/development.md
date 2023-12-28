@@ -38,6 +38,13 @@ As an alternative, you can simply use [GitHub Codespaces](https://docs.github.co
 
 In a matter of minutes, you will be ready to edit, preview and test your changes directly from the comfort of your browser.
 
+### How to Debug
+
+go-delve is available by default for the go debugger.
+See [[go-delve/delve](https://github.com/go-delve/delve)](https://github.com/go-delve/delve) for usage.
+
+Of course, you can also use your favorite debugging tools.
+
 ## READMEs
 
 For more info about working with this site, check out these READMEs:
