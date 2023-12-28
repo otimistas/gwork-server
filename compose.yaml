@@ -1,0 +1,35 @@
+services:
+  app:
+    image: golang:1.21
+    environment:
+      PORT: 50051
+      DB_HOST: db
+      DB_CONNECTION: pgsql
+      DB_PORT: 5432
+      DB_NAME: gwork
+      DB_USERNAME: postgres
+      DB_PASSWORD: password
+      APP_DEBUG: true
+      APP_ENV: local
+    volumes:
+      - .:/app:ro,cached
+    ports:
+      - 50051:50051
+    working_dir: /app
+    command: go run main.go
+    depends_on:
+      - db
+  db:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=gwork
+    volumes:
+      - db-data:/var/lib/postgresql/data
+      - ./db/init/postgresql:/docker-entrypoint-initdb.d
+
+volumes:
+  db-data:
