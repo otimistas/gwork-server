@@ -21,11 +21,10 @@ If you want to know more details about how to use it, please refer to the follow
 It runs on macOS, Windows, and Linux environments.
 
 ```shell
-git clone https://github.com/github/docs
-cd docs
-npm ci
-npm run build
-npm start
+git clone https://github.com/otimistas/gwork-server.git
+cd gwork-server
+aqua policy allow "${PWD}/aqua-policy.yaml"
+aqua i -l
 ```
 
 You should now have a running server! Visit [localhost:10012](http://localhost:10012) in your browser.

@@ -1,6 +1,6 @@
 {
   "version": "0.2",
-  "ignorePaths": ["./.golangci.yaml", "./aqua*.yaml"],
+  "ignorePaths": ["./.golangci.yaml", "./aqua*.yaml", "./aqua*.json"],
   "dictionaryDefinitions": [
     {
       "name": "custom-dictionary",
