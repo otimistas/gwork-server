@@ -8,3 +8,4 @@ hadolint
 Inclusivity
 magefile
 Otimista
+pkey
