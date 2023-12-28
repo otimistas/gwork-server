@@ -2,6 +2,20 @@
 
 This document describes the process for running this application on your local computer.
 
+## Requirements
+- [Go](#how-to-install-go)
+- [aqua](#how-to-install-aqua)
+
+### How to install Go
+
+### How to install aqua
+
+To install the build tool aqua, see [this document](https://aquaproj.github.io/docs/install).
+
+If you want to know more details about how to use it, please refer to the following documents.
+
+[aqua](https://aquaproj.github.io/docs/tutorial)
+
 ## Getting started
 
 It runs on macOS, Windows, and Linux environments.
