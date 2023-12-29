@@ -13,4 +13,6 @@ magefile
 ossp
 Otimista
 otimistas
+pgsql
 pkey
+randomblob
