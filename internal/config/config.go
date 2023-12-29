@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/caarlos0/env"
+	"github.com/caarlos0/env/v10"
 )
 
 // Config アプリケーション設定を表す構造体。
