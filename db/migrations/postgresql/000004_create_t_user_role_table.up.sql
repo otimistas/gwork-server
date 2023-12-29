@@ -1,0 +1,8 @@
+CREATE TABLE t_user_role (
+    user_id UUID REFERENCES m_users(id) ON UPDATE CASCADE ON DELETE CASCADE NOT NULL,
+    role_id UUID REFERENCES m_roles(id) ON UPDATE CASCADE ON DELETE CASCADE NOT NULL,
+    attached_by UUID REFERENCES m_users(id) ON UPDATE SET NULL ON DELETE SET NULL,
+    from_system BOOLEAN NOT NULL,
+    attached_at TIMESTAMPTZ NOT NULL,
+    PRIMARY KEY (user_id, role_id)
+);
