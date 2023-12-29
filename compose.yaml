@@ -29,7 +29,8 @@ services:
       - POSTGRES_DB=gwork
     volumes:
       - db-data:/var/lib/postgresql/data
-      - ./db/init/postgresql:/docker-entrypoint-initdb.d
+      - ./db/init/initdb.d:/docker-entrypoint-initdb.d
+      - ./db/init/postgresql:/scripts
 
 volumes:
   db-data:
