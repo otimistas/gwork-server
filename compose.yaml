@@ -10,7 +10,7 @@ services:
       DB_USERNAME: postgres
       DB_PASSWORD: password
       APP_DEBUG: true
-      APP_ENV: local
+      APP_ENV: development
     volumes:
       - .:/app:ro,cached
     ports:
@@ -29,8 +29,6 @@ services:
       - POSTGRES_DB=gwork
     volumes:
       - db-data:/var/lib/postgresql/data
-      - ./db/init/initdb.d:/docker-entrypoint-initdb.d
-      - ./db/init/postgresql:/scripts
 
 volumes:
   db-data:
