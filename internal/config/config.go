@@ -34,7 +34,7 @@ var parseFuncMap = map[reflect.Type]env.ParserFunc{
 
 func Get() (*Config, error) {
 	cfg := &Config{}
-	if err := env.ParseWithFuncs(cfg, parseFuncMap); err != nil {
+	if err := env.ParseWithOptions(cfg, env.Options{FuncMap: parseFuncMap}); err != nil {
 		return nil, fmt.Errorf("parse env: %w", err)
 	}
 
