@@ -1,0 +1,10 @@
+CREATE TABLE t_group_invites (
+    user_id TEXT REFERENCES m_users(id) ON UPDATE CASCADE ON DELETE CASCADE NOT NULL,
+    group_id TEXT REFERENCES m_groups(id) ON UPDATE CASCADE ON DELETE CASCADE NOT NULL,
+    is_valid BOOLEAN NOT NULL DEFAULT 1,
+    invited_by TEXT REFERENCES m_users(id) ON UPDATE SET NULL ON DELETE SET NULL,
+    canceled_by TEXT REFERENCES m_users(id) ON UPDATE SET NULL ON DELETE SET NULL,
+    invited_at TIMESTAMP NOT NULL,
+    canceled_at TIMESTAMP,
+    PRIMARY KEY (user_id, group_id)
+);
