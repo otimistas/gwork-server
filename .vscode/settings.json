@@ -31,6 +31,9 @@
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "files.associations": {
+    ".env.example": "dotenv"
+  },
   "go.lintOnSave": "workspace",
   "go.lintTool": "golangci-lint",
   "go.lintFlags": ["--fast"],
