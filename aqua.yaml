@@ -23,3 +23,6 @@ packages:
 - name: sqlc-dev/sqlc@v1.24.0
 - name: golang-migrate/migrate@v4.17.0
 - name: google/wire@v0.5.0
+- name: protocolbuffers/protobuf/protoc@v25.1
+- name: grpc/grpc-go/protoc-gen-go-grpc@cmd/protoc-gen-go-grpc/v1.3.0
+- name: protocolbuffers/protobuf-go/protoc-gen-go@v1.32.0

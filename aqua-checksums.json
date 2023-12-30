@@ -21,6 +21,11 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/grpc/grpc-go/cmd/protoc-gen-go-grpc/v1.3.0/protoc-gen-go-grpc.v1.3.0.linux.amd64.tar.gz",
+      "checksum": "A2893F7DB287BC8C54A8AE633C1A84482DD21A270F97AD1C63772B93EE8C0D35",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/hadolint/hadolint/v2.12.0/hadolint-Linux-x86_64",
       "checksum": "56DE6D5E5EC427E17B74FA48D51271C7FC0D61244BF5C90E828AAB8362D55010",
       "algorithm": "sha256"
@@ -38,6 +43,16 @@
     {
       "id": "github_release/github.com/makiuchi-d/arelo/v1.13.0/arelo_Linux_x86_64.tar.gz",
       "checksum": "E9891E464C5B511BEB4D571FFC0F7E1A289AE413A482B25C192B31A76A123E6E",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/protocolbuffers/protobuf-go/v1.32.0/protoc-gen-go.v1.32.0.linux.amd64.tar.gz",
+      "checksum": "E1C468D934C4015573A57ED3E89E0D303170DC1D3F765AF634A5BAE06D5FD3C7",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/protocolbuffers/protobuf/v25.1/protoc-25.1-linux-x86_64.zip",
+      "checksum": "ED8FCA87A11C888FED329D6A59C34C7D436165F662A2C875246DDB1AC2B6DD50",
       "algorithm": "sha256"
     },
     {
