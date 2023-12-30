@@ -1,5 +1,7 @@
 CREATE TABLE m_users (
     id BINARY(16) PRIMARY KEY DEFAULT (UUID_TO_BIN(UUID())),
+	login_id VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
     name VARCHAR(255) NOT NULL,
     last_logged_in_at TIMESTAMP,
     created_by BINARY(16) NULL,
