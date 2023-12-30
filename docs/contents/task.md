@@ -170,3 +170,11 @@ Generate a Go file with schema `/db/migrations/**/` and query `/db/query/**/`.
 
 The generated code will be output under `/infra/sql/**/`.
 
+#### `aqua:reload`
+
+```shell
+mage aqua:reload
+```
+
+When installed using aqua, this command should be used to reflect the installation in the environment.
+
