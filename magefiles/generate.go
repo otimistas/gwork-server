@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"os"
 	"path/filepath"
 
 	"github.com/joho/godotenv"
@@ -24,6 +25,11 @@ func (s Generate) Tabledoc(ctx context.Context) {
 // Protoc generates go code for grpc.
 func (s Generate) Protoc(ctx context.Context) {
 	mg.CtxDeps(ctx, s.protoc)
+}
+
+// Migration generates migration file.
+func (s Generate) Migration(ctx context.Context, filename string) {
+	mg.CtxDeps(ctx, s.migrationGenerator(filename))
 }
 
 func (s Generate) tabledoc() error {
@@ -72,4 +78,34 @@ func (s Generate) protoc() error {
 	}
 
 	return nil
+}
+
+func (s Generate) migrationGenerator(filename string) func() error {
+	return func() error {
+		repoRoot, err := utils.RepoRoot()
+		if err != nil {
+			return fmt.Errorf("get repo root: %w", err)
+		}
+
+		dbDir := filepath.Join(repoRoot, "db", "migrations")
+
+		managers, err := os.ReadDir(dbDir)
+		if err != nil {
+			return fmt.Errorf("read directory: %w", err)
+		}
+
+		for _, manager := range managers {
+			if manager.IsDir() {
+				migrateDir := filepath.Join(repoRoot, "db", "migrations", manager.Name())
+
+				if err := sh.RunV("migrate",
+					"create", "-ext", "sql", "-dir", migrateDir, "-seq", filename,
+				); err != nil {
+					return fmt.Errorf("run generate migration: %w", err)
+				}
+			}
+		}
+
+		return nil
+	}
 }
