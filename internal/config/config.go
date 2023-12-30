@@ -13,7 +13,7 @@ import (
 	"github.com/caarlos0/env/v10"
 )
 
-// Config アプリケーション設定を表す構造体。
+// Config A structure representing the application settings.
 type Config struct {
 	Port int `env:"PORT" envDefault:"50051"`
 	// mysql, pgsql, sqlite
