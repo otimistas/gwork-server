@@ -16,11 +16,13 @@ RUN curl -sSfL https://raw.githubusercontent.com/aquaproj/aqua-installer/v${AQUA
 COPY ../aqua-policy.yaml /app/aqua-policy.yaml
 COPY ../aqua-registry.yaml /app/aqua-registry.yaml
 COPY ../aqua.yaml /app/aqua.yaml
+COPY ../scripts/sample-run.sh /init/run.sh
+
+RUN chmod +x /init/run.sh
 
 WORKDIR /app
 
 ENV AQUA_GLOBAL_CONFIG=/app/aqua.yaml
 ENV PATH="/root/.local/share/aquaproj-aqua/bin:$PATH"
 ENV AQUA_POLICY_CONFIG=/app/aqua-policy.yaml
-RUN aqua -c /app/aqua.yaml i
 

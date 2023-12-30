@@ -16,11 +16,11 @@ services:
       APP_ENV: development
       DB_URL: postgres://postgres:password@db:5432/gwork?sslmode=disable # For Dockerfile
     volumes:
-      - .:/app:ro,cached
+      - .:/app
     ports:
       - 50051:50051
     working_dir: /app
-    command: go run main.go # TODO: Change to the command for hot reloading
+    command: sh -c "/init/run.sh"
     depends_on:
       - db
   db:
