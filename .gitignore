@@ -26,3 +26,6 @@ go.work
 # storage
 storage/**
 
+# Go
+__debug_bin*
+
