@@ -4,7 +4,7 @@ Only the following three database managers are currently supported.
 The name to be set in the environment variable DB_CONNECTION is listed next to the colon.
 
 - mysql: mysql
-- postgresql: pgsql
+- postgresql: postgresql
 - sqlite: sqlite
 
 They are designed with an interface that allows for easy extension, so implementation code can be added to support other database managers.

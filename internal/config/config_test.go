@@ -49,7 +49,7 @@ func TestGet(t *testing.T) {
 			out: &config.Config{
 				Port:          50051,
 				DebuggingPort: 2345,
-				DBConnection:  "pgsql",
+				DBConnection:  "postgresql",
 				DBHost:        "localhost",
 				DBPort:        5432,
 				DBName:        "app",
@@ -107,7 +107,7 @@ func TestGet(t *testing.T) {
 			out: &config.Config{
 				Port:          50051,
 				DebuggingPort: 2345,
-				DBConnection:  "pgsql",
+				DBConnection:  "postgresql",
 				DBHost:        "localhost",
 				DBPort:        5432,
 				DBName:        "app",
@@ -133,7 +133,7 @@ func TestGet(t *testing.T) {
 			out: &config.Config{
 				Port:          50051,
 				DebuggingPort: 2345,
-				DBConnection:  "pgsql",
+				DBConnection:  "postgresql",
 				DBHost:        "localhost",
 				DBPort:        5432,
 				DBName:        "app",
@@ -159,7 +159,7 @@ func TestGet(t *testing.T) {
 			out: &config.Config{
 				Port:          50051,
 				DebuggingPort: 2345,
-				DBConnection:  "pgsql",
+				DBConnection:  "postgresql",
 				DBHost:        "localhost",
 				DBPort:        5432,
 				DBName:        "app",
@@ -185,7 +185,7 @@ func TestGet(t *testing.T) {
 			out: &config.Config{
 				Port:          50051,
 				DebuggingPort: 2345,
-				DBConnection:  "pgsql",
+				DBConnection:  "postgresql",
 				DBHost:        "localhost",
 				DBPort:        5432,
 				DBName:        "app",
@@ -207,7 +207,7 @@ func TestGet(t *testing.T) {
 			out: &config.Config{
 				Port:          50051,
 				DebuggingPort: 2345,
-				DBConnection:  "pgsql",
+				DBConnection:  "postgresql",
 				DBHost:        "localhost",
 				DBPort:        5432,
 				DBName:        "app",
@@ -229,7 +229,7 @@ func TestGet(t *testing.T) {
 			out: &config.Config{
 				Port:          50051,
 				DebuggingPort: 2345,
-				DBConnection:  "pgsql",
+				DBConnection:  "postgresql",
 				DBHost:        "localhost",
 				DBPort:        5432,
 				DBName:        "app",

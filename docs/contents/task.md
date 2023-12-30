@@ -103,7 +103,7 @@ Return migration for the specified number.
 mage db:seed
 ```
 
-Apply [seeds.sql](. /db/seeds.sql) is applied to the created database to create the initial data.
+Apply `/db/init/**/` is applied to the created database to create the initial data.
 
 #### `db:drop`
 
@@ -150,10 +150,10 @@ mage diff:tabledoc
 
 Displays the difference between the schema on the table and the generated documents.
 
-#### `generate:proto`
+#### `generate:protoc`
 
 ```shell
-mage generate:proto
+mage generate:protoc
 ```
 
 Generate Go files under `/pb` according to the contents of the file `/proto/*.proto`.

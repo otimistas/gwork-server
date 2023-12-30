@@ -17,8 +17,8 @@ import (
 type Config struct {
 	Port          int `env:"PORT" envDefault:"50051"`
 	DebuggingPort int `env:"DEBUGGING_PORT" envDefault:"2345"`
-	// mysql, pgsql, sqlite
-	DBConnection string `env:"DB_CONNECTION" envDefault:"pgsql"`
+	// mysql, postgresql, sqlite
+	DBConnection string `env:"DB_CONNECTION" envDefault:"postgresql"`
 	DBHost       string `env:"DB_HOST" envDefault:"localhost"`
 	DBPort       int    `env:"DB_PORT" envDefault:"5432"`
 	DBName       string `env:"DB_NAME,required"`

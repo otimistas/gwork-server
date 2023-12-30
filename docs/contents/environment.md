@@ -17,7 +17,7 @@ There are two ways to set environment variables.
 
 | Name | Valid values | Description | Require | Default |
 | --- | --- |
-| `DB_CONNECTION` | {[valid database](./database.md)} | Indicates the database manager to connect to. | ✕ | pgsql |
+| `DB_CONNECTION` | {[valid database](./database.md)} | Indicates the database manager to connect to. | ✕ | postgresql |
 | `DB_HOST` | {string} | Indicates the host name of the database.
  | ✕ | localhost |
 | `DB_PORT` | {number} | Indicates the port number of the database. | ✕ | 5432 |
