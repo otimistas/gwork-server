@@ -21,6 +21,11 @@ func (s Generate) Tabledoc(ctx context.Context) {
 	mg.CtxDeps(ctx, s.tabledoc)
 }
 
+// Protoc generates go code for grpc.
+func (s Generate) Protoc(ctx context.Context) {
+	mg.CtxDeps(ctx, s.protoc)
+}
+
 func (s Generate) tabledoc() error {
 	repoRoot, err := utils.RepoRoot()
 	if err != nil {
@@ -44,6 +49,26 @@ func (s Generate) tabledoc() error {
 
 	if err := sh.RunWithV(env, "tbls", "doc", "--rm-dist"); err != nil {
 		return fmt.Errorf("run generate table document: %w", err)
+	}
+
+	return nil
+}
+
+func (s Generate) protoc() error {
+	repoRoot, err := utils.RepoRoot()
+	if err != nil {
+		return fmt.Errorf("get repo root: %w", err)
+	}
+
+	protoDir := filepath.Join(repoRoot, "proto")
+
+	genCmd := fmt.Sprintf("protoc -I%[1]s --go_out=%[1]s --go-grpc_out=%[1]s %[2]s/*.proto", repoRoot, protoDir)
+
+	if err := sh.RunV("bash",
+		"-c",
+		genCmd,
+	); err != nil {
+		return fmt.Errorf("run generate go code for grpc: %w", err)
 	}
 
 	return nil
