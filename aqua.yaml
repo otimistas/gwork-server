@@ -26,3 +26,4 @@ packages:
 - name: protocolbuffers/protobuf/protoc@v25.1
 - name: grpc/grpc-go/protoc-gen-go-grpc@cmd/protoc-gen-go-grpc/v1.3.0
 - name: protocolbuffers/protobuf-go/protoc-gen-go@v1.32.0
+- name: k1LoW/tbls@v1.72.0

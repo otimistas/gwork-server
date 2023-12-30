@@ -31,6 +31,11 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/k1LoW/tbls/v1.72.0/tbls_v1.72.0_linux_amd64.tar.gz",
+      "checksum": "12824108E712F2F8D21258E7C69896460573A58C286053BA419C09301176B6E9",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/koalaman/shellcheck/v0.9.0/shellcheck-v0.9.0.linux.x86_64.tar.xz",
       "checksum": "700324C6DD0EBEA0117591C6CC9D7350D9C7C5C287ACBAD7630FA17B1D4D9E2F",
       "algorithm": "sha256"
@@ -64,6 +69,11 @@
       "id": "github_release/github.com/sqlc-dev/sqlc/v1.24.0/sqlc_1.24.0_linux_amd64.tar.gz",
       "checksum": "F3D1BE92EE57B448BC628A912906BB8B7F49929D36C6D36CEB18033EBE42D760",
       "algorithm": "sha256"
+    },
+    {
+      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.111.0/registry.yaml",
+      "checksum": "A8863C686F37BD329F0EE2C66B8B06D4223F970521E64477E8E0A3E7DD2B3EB559E42382C60D08F3F0285DA9B58B5833435EA166E99BB44963FE111A75677365",
+      "algorithm": "sha512"
     }
   ]
 }
