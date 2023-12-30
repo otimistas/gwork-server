@@ -43,6 +43,8 @@ docker compose down --volumes --remove-orphans
 
 There are two ways to execute commands from within a container.
 
+It is recommended that the commands to be executed be done through [defined tasks](../contents/task.md).
+
 - Run by command<br>
   As an example, consider execution from the app container.<br>
   It is important to note that when environment variables are used on a command, they are expanded before they enter the container.<br>

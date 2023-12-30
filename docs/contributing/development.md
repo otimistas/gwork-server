@@ -2,11 +2,15 @@
 
 This document describes the process for running this application on your local computer.
 
-## Requirements
+## Requirements(Unless you [use Github Codespaces](#using-github-codespaces))
 - [Go](#how-to-install-go)
 - [aqua](#how-to-install-aqua)
 
 ### How to install Go
+
+The Go language must be available in the development environment.
+
+Please create an environment that allows development in the go language from [this document](https://go.dev/doc/install).
 
 ### How to install aqua
 
@@ -27,11 +31,29 @@ aqua policy allow "${PWD}/aqua-policy.yaml"
 aqua i -l
 ```
 
-You should now have a running server! Visit [localhost:10012](http://localhost:10012) in your browser.
+### Use docker compose which is easy by default
 
-When you're ready to stop your local server, type <kbd>Ctrl</kbd>+<kbd>C</kbd> in your terminal window.
+You can easily build a server by using the containers provided.
+This container uses hot reloading, so local file changes can be reflected in real time.
 
-### Using GitHub Codespaces
+Check [this document](./sample-container.md) for more information.
+
+### Use your own database server
+
+If you want to use your own defined database server, register database-related information in `.env` and then start up the server.
+You can connect to the database without using the `.env` file by setting the same following items in the environment variables.
+
+Please check [this document](../contents/environment.md) for information on environment variable items.
+
+When the environment variables are ready, execute the following command.
+
+```shell
+mage dev
+```
+
+This command allows development with hot loading.
+
+## Using GitHub Codespaces
 
 As an alternative, you can simply use [GitHub Codespaces](https://docs.github.com/en/codespaces/overview). For more information about using a codespace for working on GitHub documentation, see "[Working in a codespace](https://docs.github.com/en/contributing/setting-up-your-environment-to-work-on-github-docs/working-on-github-docs-in-a-codespace)."
 
@@ -44,6 +66,18 @@ See [[go-delve/delve](https://github.com/go-delve/delve)](https://github.com/go-
 
 Of course, you can also use your favorite debugging tools.
 
+## About Environment Variables
+
+In this application, environment variables can be set by writing them in the `.env` file.
+Since the `.env` file does not exist at clone time, it can be easily implemented by copying and editing `.env.example`.
+
+Please check [this document](../contents/environment.md) for information on environment variable items.
+
+The application server and database server are designed to be loosely coupled, so that the database is not bound to the currently supported database configuration in `.env`.
+
 ## READMEs
 
 For more info about working with this site, check out these READMEs:
+
+- [Sample Container](./sample-container.md)
+- [Environment Variables](../contents/environment.md)
