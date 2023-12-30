@@ -5,6 +5,7 @@ go 1.21.4
 require (
 	github.com/caarlos0/env/v10 v10.0.0
 	github.com/google/go-cmp v0.6.0
+	github.com/joho/godotenv v1.5.1
 	google.golang.org/grpc v1.60.1
 	google.golang.org/protobuf v1.32.0
 )
