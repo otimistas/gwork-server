@@ -18,6 +18,8 @@ type Config struct {
 	DBUsername   string `env:"DB_USERNAME,required"`
 	DBPassword   string `env:"DB_PASSWORD"`
 
+	StoragePath string `env:"STORAGE_PATH,required"`
+
 	AppDebug bool `env:"APP_DEBUG"`
 	// development, staging, production
 	AppEnv Environment `env:"APP_ENV" envDefault:"production"`

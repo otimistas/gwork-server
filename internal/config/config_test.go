@@ -20,13 +20,14 @@ func TestGet(t *testing.T) {
 		"DB_NAME",
 		"DB_USERNAME",
 		"DB_PASSWORD",
+		"STORAGE_PATH",
 		"APP_DEBUG",
 		"APP_ENV",
 		"FAKE_TIME",
 	}
 	for _, v := range envKeys {
 		t.Setenv(v, "")
-		os.Unsetenv(v)
+		os.Unsetenv(v) //nolint:errcheck
 	}
 
 	cases := []struct {
@@ -38,8 +39,9 @@ func TestGet(t *testing.T) {
 		{
 			name: "minimum",
 			env: map[string]string{
-				"DB_NAME":     "app",
-				"DB_USERNAME": "user",
+				"DB_NAME":      "app",
+				"DB_USERNAME":  "user",
+				"STORAGE_PATH": "/path/to/storage/dir",
 			},
 			out: &config.Config{
 				Port:         50051,
@@ -48,6 +50,7 @@ func TestGet(t *testing.T) {
 				DBPort:       5432,
 				DBName:       "app",
 				DBUsername:   "user",
+				StoragePath:  "/path/to/storage/dir",
 				AppEnv:       "production",
 			},
 		},
@@ -61,6 +64,7 @@ func TestGet(t *testing.T) {
 				"DB_NAME":       "app",
 				"DB_USERNAME":   "user",
 				"DB_PASSWORD":   "password",
+				"STORAGE_PATH":  "/path/to/storage/dir",
 				"APP_DEBUG":     "true",
 				"APP_ENV":       "staging",
 				"FAKE_TIME":     "true",
@@ -73,6 +77,7 @@ func TestGet(t *testing.T) {
 				DBName:       "app",
 				DBUsername:   "user",
 				DBPassword:   "password",
+				StoragePath:  "/path/to/storage/dir",
 				AppDebug:     true,
 				AppEnv:       "staging",
 				FakeTime: config.FakeTimeMode{
@@ -84,9 +89,10 @@ func TestGet(t *testing.T) {
 		{
 			name: "FAKE_TIME is RFC3339 string",
 			env: map[string]string{
-				"DB_NAME":     "app",
-				"DB_USERNAME": "user",
-				"FAKE_TIME":   "2023-01-02T12:34:56Z",
+				"DB_NAME":      "app",
+				"DB_USERNAME":  "user",
+				"STORAGE_PATH": "/path/to/storage/dir",
+				"FAKE_TIME":    "2023-01-02T12:34:56Z",
 			},
 			out: &config.Config{
 				Port:         50051,
@@ -95,6 +101,7 @@ func TestGet(t *testing.T) {
 				DBPort:       5432,
 				DBName:       "app",
 				DBUsername:   "user",
+				StoragePath:  "/path/to/storage/dir",
 				AppEnv:       "production",
 				FakeTime: config.FakeTimeMode{
 					Enabled: true,
@@ -105,9 +112,10 @@ func TestGet(t *testing.T) {
 		{
 			name: "FAKE_TIME is true",
 			env: map[string]string{
-				"DB_NAME":     "app",
-				"DB_USERNAME": "user",
-				"FAKE_TIME":   "true",
+				"DB_NAME":      "app",
+				"DB_USERNAME":  "user",
+				"STORAGE_PATH": "/path/to/storage/dir",
+				"FAKE_TIME":    "true",
 			},
 			out: &config.Config{
 				Port:         50051,
@@ -116,6 +124,7 @@ func TestGet(t *testing.T) {
 				DBPort:       5432,
 				DBName:       "app",
 				DBUsername:   "user",
+				StoragePath:  "/path/to/storage/dir",
 				AppEnv:       "production",
 				FakeTime: config.FakeTimeMode{
 					Enabled: true,
@@ -126,9 +135,10 @@ func TestGet(t *testing.T) {
 		{
 			name: "FAKE_TIME is 1",
 			env: map[string]string{
-				"DB_NAME":     "app",
-				"DB_USERNAME": "user",
-				"FAKE_TIME":   "1",
+				"DB_NAME":      "app",
+				"DB_USERNAME":  "user",
+				"STORAGE_PATH": "/path/to/storage/dir",
+				"FAKE_TIME":    "1",
 			},
 			out: &config.Config{
 				Port:         50051,
@@ -137,6 +147,7 @@ func TestGet(t *testing.T) {
 				DBPort:       5432,
 				DBName:       "app",
 				DBUsername:   "user",
+				StoragePath:  "/path/to/storage/dir",
 				AppEnv:       "production",
 				FakeTime: config.FakeTimeMode{
 					Enabled: true,
@@ -147,9 +158,10 @@ func TestGet(t *testing.T) {
 		{
 			name: "FAKE_TIME is false",
 			env: map[string]string{
-				"DB_NAME":     "app",
-				"DB_USERNAME": "user",
-				"FAKE_TIME":   "false",
+				"DB_NAME":      "app",
+				"DB_USERNAME":  "user",
+				"STORAGE_PATH": "/path/to/storage/dir",
+				"FAKE_TIME":    "false",
 			},
 			out: &config.Config{
 				Port:         50051,
@@ -158,15 +170,17 @@ func TestGet(t *testing.T) {
 				DBPort:       5432,
 				DBName:       "app",
 				DBUsername:   "user",
+				StoragePath:  "/path/to/storage/dir",
 				AppEnv:       "production",
 			},
 		},
 		{
 			name: "FAKE_TIME is 0",
 			env: map[string]string{
-				"DB_NAME":     "app",
-				"DB_USERNAME": "user",
-				"FAKE_TIME":   "0",
+				"DB_NAME":      "app",
+				"DB_USERNAME":  "user",
+				"STORAGE_PATH": "/path/to/storage/dir",
+				"FAKE_TIME":    "0",
 			},
 			out: &config.Config{
 				Port:         50051,
@@ -175,15 +189,17 @@ func TestGet(t *testing.T) {
 				DBPort:       5432,
 				DBName:       "app",
 				DBUsername:   "user",
+				StoragePath:  "/path/to/storage/dir",
 				AppEnv:       "production",
 			},
 		},
 		{
 			name: "FAKE_TIME is empty string",
 			env: map[string]string{
-				"DB_NAME":     "app",
-				"DB_USERNAME": "user",
-				"FAKE_TIME":   "",
+				"DB_NAME":      "app",
+				"DB_USERNAME":  "user",
+				"STORAGE_PATH": "/path/to/storage/dir",
+				"FAKE_TIME":    "",
 			},
 			out: &config.Config{
 				Port:         50051,
@@ -192,65 +208,81 @@ func TestGet(t *testing.T) {
 				DBPort:       5432,
 				DBName:       "app",
 				DBUsername:   "user",
+				StoragePath:  "/path/to/storage/dir",
 				AppEnv:       "production",
 			},
 		},
 		{
 			name: "invalid PORT",
 			env: map[string]string{
-				"PORT":        "invalid",
-				"DB_NAME":     "app",
-				"DB_USERNAME": "user",
+				"PORT":         "invalid",
+				"DB_NAME":      "app",
+				"DB_USERNAME":  "user",
+				"STORAGE_PATH": "/path/to/storage/dir",
 			},
 			failed: true,
 		},
 		{
 			name: "invalid DB_PORT",
 			env: map[string]string{
-				"DB_PORT":     "invalid",
-				"DB_NAME":     "app",
-				"DB_USERNAME": "user",
+				"DB_PORT":      "invalid",
+				"DB_NAME":      "app",
+				"DB_USERNAME":  "user",
+				"STORAGE_PATH": "/path/to/storage/dir",
 			},
 			failed: true,
 		},
 		{
 			name: "invalid APP_ENV",
 			env: map[string]string{
-				"APP_ENV":     "invalid",
-				"DB_NAME":     "app",
-				"DB_USERNAME": "user",
+				"APP_ENV":      "invalid",
+				"DB_NAME":      "app",
+				"DB_USERNAME":  "user",
+				"STORAGE_PATH": "/path/to/storage/dir",
 			},
 			failed: true,
 		},
 		{
 			name: "invalid APP_DEBUG",
 			env: map[string]string{
-				"APP_DEBUG":   "invalid",
-				"DB_NAME":     "app",
-				"DB_USERNAME": "user",
+				"APP_DEBUG":    "invalid",
+				"DB_NAME":      "app",
+				"DB_USERNAME":  "user",
+				"STORAGE_PATH": "/path/to/storage/dir",
 			},
 			failed: true,
 		},
 		{
 			name: "invalid FAKE_TIME",
 			env: map[string]string{
-				"DB_NAME":     "app",
-				"DB_USERNAME": "user",
-				"FAKE_TIME":   "invalid",
+				"DB_NAME":      "app",
+				"DB_USERNAME":  "user",
+				"STORAGE_PATH": "/path/to/storage/dir",
+				"FAKE_TIME":    "invalid",
 			},
 			failed: true,
 		},
 		{
 			name: "missing DB_NAME",
 			env: map[string]string{
-				"DB_USERNAME": "user",
+				"DB_USERNAME":  "user",
+				"STORAGE_PATH": "/path/to/storage/dir",
 			},
 			failed: true,
 		},
 		{
 			name: "missing DB_USERNAME",
 			env: map[string]string{
-				"DB_NAME": "app",
+				"DB_NAME":      "app",
+				"STORAGE_PATH": "/path/to/storage/dir",
+			},
+			failed: true,
+		},
+		{
+			name: "missing STORAGE_PATH",
+			env: map[string]string{
+				"DB_NAME":     "app",
+				"DB_USERNAME": "user",
 			},
 			failed: true,
 		},
