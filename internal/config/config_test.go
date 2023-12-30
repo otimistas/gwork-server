@@ -27,7 +27,7 @@ func TestGet(t *testing.T) {
 	}
 	for _, v := range envKeys {
 		t.Setenv(v, "")
-		os.Unsetenv(v) //nolint:errcheck
+		os.Unsetenv(v)
 	}
 
 	cases := []struct {

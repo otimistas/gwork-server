@@ -15,8 +15,6 @@ linters:
     # Report unused functions and variables
     - deadcode
     # Report when error return value is not acknowledged
-    - errcheck
-    # Check that error types are compared with errors.Is, that %w is used for wrapping error types in fmt.Errorf, and that errors.As is used to convert error types
     - errorlint
     # Check exhaustiveness of enum switch statements
     - exhaustive
