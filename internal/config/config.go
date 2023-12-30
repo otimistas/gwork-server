@@ -24,6 +24,7 @@ type Config struct {
 	DBName       string `env:"DB_NAME,required"`
 	DBUsername   string `env:"DB_USERNAME,required"`
 	DBPassword   string `env:"DB_PASSWORD"`
+	DBUrl        string `env:"DB_URL,required"`
 
 	StoragePath string `env:"STORAGE_PATH,required"`
 

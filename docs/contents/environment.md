@@ -24,6 +24,7 @@ There are two ways to set environment variables.
 | `DB_NAME` | {string} | Indicates the database name. | ○ | ✕ |
 | `DB_USERNAME` | {string} | Indicates the user name for the database connection. | ○ | ✕ |
 | `DB_PASSWORD` | {string} | Indicates the password for the database connection. | ✕ | ✕ |
+| `DB_URL` | {database url format} | Indicates the database url to connect to. | ○ | ✕ |
 
 ## Application Settings
 

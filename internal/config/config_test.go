@@ -21,6 +21,7 @@ func TestGet(t *testing.T) {
 		"DB_NAME",
 		"DB_USERNAME",
 		"DB_PASSWORD",
+		"DB_URL",
 		"STORAGE_PATH",
 		"APP_DEBUG",
 		"APP_ENV",
@@ -42,6 +43,7 @@ func TestGet(t *testing.T) {
 			env: map[string]string{
 				"DB_NAME":      "app",
 				"DB_USERNAME":  "user",
+				"DB_URL":       "postgres://postgres:password@localhost:5432/gwork?sslmode=disable",
 				"STORAGE_PATH": "/path/to/storage/dir",
 			},
 			out: &config.Config{
@@ -52,6 +54,7 @@ func TestGet(t *testing.T) {
 				DBPort:        5432,
 				DBName:        "app",
 				DBUsername:    "user",
+				DBUrl:         "postgres://postgres:password@localhost:5432/gwork?sslmode=disable",
 				StoragePath:   "/path/to/storage/dir",
 				AppEnv:        "production",
 			},
@@ -67,6 +70,7 @@ func TestGet(t *testing.T) {
 				"DB_NAME":        "app",
 				"DB_USERNAME":    "user",
 				"DB_PASSWORD":    "password",
+				"DB_URL":         "postgres://postgres:password@localhost:5432/gwork?sslmode=disable",
 				"STORAGE_PATH":   "/path/to/storage/dir",
 				"APP_DEBUG":      "true",
 				"APP_ENV":        "staging",
@@ -81,6 +85,7 @@ func TestGet(t *testing.T) {
 				DBName:        "app",
 				DBUsername:    "user",
 				DBPassword:    "password",
+				DBUrl:         "postgres://postgres:password@localhost:5432/gwork?sslmode=disable",
 				StoragePath:   "/path/to/storage/dir",
 				AppDebug:      true,
 				AppEnv:        "staging",
@@ -95,6 +100,7 @@ func TestGet(t *testing.T) {
 			env: map[string]string{
 				"DB_NAME":      "app",
 				"DB_USERNAME":  "user",
+				"DB_URL":       "postgres://postgres:password@localhost:5432/gwork?sslmode=disable",
 				"STORAGE_PATH": "/path/to/storage/dir",
 				"FAKE_TIME":    "2023-01-02T12:34:56Z",
 			},
@@ -106,6 +112,7 @@ func TestGet(t *testing.T) {
 				DBPort:        5432,
 				DBName:        "app",
 				DBUsername:    "user",
+				DBUrl:         "postgres://postgres:password@localhost:5432/gwork?sslmode=disable",
 				StoragePath:   "/path/to/storage/dir",
 				AppEnv:        "production",
 				FakeTime: config.FakeTimeMode{
@@ -119,6 +126,7 @@ func TestGet(t *testing.T) {
 			env: map[string]string{
 				"DB_NAME":      "app",
 				"DB_USERNAME":  "user",
+				"DB_URL":       "postgres://postgres:password@localhost:5432/gwork?sslmode=disable",
 				"STORAGE_PATH": "/path/to/storage/dir",
 				"FAKE_TIME":    "true",
 			},
@@ -130,6 +138,7 @@ func TestGet(t *testing.T) {
 				DBPort:        5432,
 				DBName:        "app",
 				DBUsername:    "user",
+				DBUrl:         "postgres://postgres:password@localhost:5432/gwork?sslmode=disable",
 				StoragePath:   "/path/to/storage/dir",
 				AppEnv:        "production",
 				FakeTime: config.FakeTimeMode{
@@ -143,6 +152,7 @@ func TestGet(t *testing.T) {
 			env: map[string]string{
 				"DB_NAME":      "app",
 				"DB_USERNAME":  "user",
+				"DB_URL":       "postgres://postgres:password@localhost:5432/gwork?sslmode=disable",
 				"STORAGE_PATH": "/path/to/storage/dir",
 				"FAKE_TIME":    "1",
 			},
@@ -154,6 +164,7 @@ func TestGet(t *testing.T) {
 				DBPort:        5432,
 				DBName:        "app",
 				DBUsername:    "user",
+				DBUrl:         "postgres://postgres:password@localhost:5432/gwork?sslmode=disable",
 				StoragePath:   "/path/to/storage/dir",
 				AppEnv:        "production",
 				FakeTime: config.FakeTimeMode{
@@ -167,6 +178,7 @@ func TestGet(t *testing.T) {
 			env: map[string]string{
 				"DB_NAME":      "app",
 				"DB_USERNAME":  "user",
+				"DB_URL":       "postgres://postgres:password@localhost:5432/gwork?sslmode=disable",
 				"STORAGE_PATH": "/path/to/storage/dir",
 				"FAKE_TIME":    "false",
 			},
@@ -178,6 +190,7 @@ func TestGet(t *testing.T) {
 				DBPort:        5432,
 				DBName:        "app",
 				DBUsername:    "user",
+				DBUrl:         "postgres://postgres:password@localhost:5432/gwork?sslmode=disable",
 				StoragePath:   "/path/to/storage/dir",
 				AppEnv:        "production",
 			},
@@ -187,6 +200,7 @@ func TestGet(t *testing.T) {
 			env: map[string]string{
 				"DB_NAME":      "app",
 				"DB_USERNAME":  "user",
+				"DB_URL":       "postgres://postgres:password@localhost:5432/gwork?sslmode=disable",
 				"STORAGE_PATH": "/path/to/storage/dir",
 				"FAKE_TIME":    "0",
 			},
@@ -198,6 +212,7 @@ func TestGet(t *testing.T) {
 				DBPort:        5432,
 				DBName:        "app",
 				DBUsername:    "user",
+				DBUrl:         "postgres://postgres:password@localhost:5432/gwork?sslmode=disable",
 				StoragePath:   "/path/to/storage/dir",
 				AppEnv:        "production",
 			},
@@ -207,6 +222,7 @@ func TestGet(t *testing.T) {
 			env: map[string]string{
 				"DB_NAME":      "app",
 				"DB_USERNAME":  "user",
+				"DB_URL":       "postgres://postgres:password@localhost:5432/gwork?sslmode=disable",
 				"STORAGE_PATH": "/path/to/storage/dir",
 				"FAKE_TIME":    "",
 			},
@@ -218,6 +234,7 @@ func TestGet(t *testing.T) {
 				DBPort:        5432,
 				DBName:        "app",
 				DBUsername:    "user",
+				DBUrl:         "postgres://postgres:password@localhost:5432/gwork?sslmode=disable",
 				StoragePath:   "/path/to/storage/dir",
 				AppEnv:        "production",
 			},
@@ -228,6 +245,7 @@ func TestGet(t *testing.T) {
 				"PORT":         "invalid",
 				"DB_NAME":      "app",
 				"DB_USERNAME":  "user",
+				"DB_URL":       "postgres://postgres:password@localhost:5432/gwork?sslmode=disable",
 				"STORAGE_PATH": "/path/to/storage/dir",
 			},
 			failed: true,
@@ -238,6 +256,7 @@ func TestGet(t *testing.T) {
 				"DEBUGGING_PORT": "invalid",
 				"DB_NAME":        "app",
 				"DB_USERNAME":    "user",
+				"DB_URL":         "postgres://postgres:password@localhost:5432/gwork?sslmode=disable",
 				"STORAGE_PATH":   "/path/to/storage/dir",
 			},
 			failed: true,
@@ -248,6 +267,7 @@ func TestGet(t *testing.T) {
 				"DB_PORT":      "invalid",
 				"DB_NAME":      "app",
 				"DB_USERNAME":  "user",
+				"DB_URL":       "postgres://postgres:password@localhost:5432/gwork?sslmode=disable",
 				"STORAGE_PATH": "/path/to/storage/dir",
 			},
 			failed: true,
@@ -258,6 +278,7 @@ func TestGet(t *testing.T) {
 				"APP_ENV":      "invalid",
 				"DB_NAME":      "app",
 				"DB_USERNAME":  "user",
+				"DB_URL":       "postgres://postgres:password@localhost:5432/gwork?sslmode=disable",
 				"STORAGE_PATH": "/path/to/storage/dir",
 			},
 			failed: true,
@@ -268,6 +289,7 @@ func TestGet(t *testing.T) {
 				"APP_DEBUG":    "invalid",
 				"DB_NAME":      "app",
 				"DB_USERNAME":  "user",
+				"DB_URL":       "postgres://postgres:password@localhost:5432/gwork?sslmode=disable",
 				"STORAGE_PATH": "/path/to/storage/dir",
 			},
 			failed: true,
@@ -277,6 +299,7 @@ func TestGet(t *testing.T) {
 			env: map[string]string{
 				"DB_NAME":      "app",
 				"DB_USERNAME":  "user",
+				"DB_URL":       "postgres://postgres:password@localhost:5432/gwork?sslmode=disable",
 				"STORAGE_PATH": "/path/to/storage/dir",
 				"FAKE_TIME":    "invalid",
 			},
@@ -286,6 +309,7 @@ func TestGet(t *testing.T) {
 			name: "missing DB_NAME",
 			env: map[string]string{
 				"DB_USERNAME":  "user",
+				"DB_URL":       "postgres://postgres:password@localhost:5432/gwork?sslmode=disable",
 				"STORAGE_PATH": "/path/to/storage/dir",
 			},
 			failed: true,
@@ -294,6 +318,16 @@ func TestGet(t *testing.T) {
 			name: "missing DB_USERNAME",
 			env: map[string]string{
 				"DB_NAME":      "app",
+				"DB_URL":       "postgres://postgres:password@localhost:5432/gwork?sslmode=disable",
+				"STORAGE_PATH": "/path/to/storage/dir",
+			},
+			failed: true,
+		},
+		{
+			name: "missing DB_URL",
+			env: map[string]string{
+				"DB_NAME":      "app",
+				"DB_USERNAME":  "user",
 				"STORAGE_PATH": "/path/to/storage/dir",
 			},
 			failed: true,
@@ -303,6 +337,7 @@ func TestGet(t *testing.T) {
 			env: map[string]string{
 				"DB_NAME":     "app",
 				"DB_USERNAME": "user",
+				"DB_URL":      "postgres://postgres:password@localhost:5432/gwork?sslmode=disable",
 			},
 			failed: true,
 		},
