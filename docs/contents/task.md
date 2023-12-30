@@ -67,7 +67,7 @@ Execute any files that have not been executed. Note that you can use [db:up](#db
 #### `db:up ${number}`
 
 ```shell
-mage db:up "${number}"
+mage db:up ${number}
 ```
 
 Execute migration for the specified number.
@@ -75,7 +75,7 @@ Execute migration for the specified number.
 #### `db:force ${version}`
 
 ```shell
-mage db:force "${version}"
+mage db:force ${version}
 ```
 
 Force the database version to the specified version.
@@ -92,7 +92,7 @@ You can use [db:down](#dbdown-number) to specify how many versions to roll back.
 #### `db:down ${number}`
 
 ```shell
-mage db:down "${number}"
+mage db:down ${number}
 ```
 
 Return migration for the specified number.
@@ -134,13 +134,21 @@ Note that this cannot be executed in a production environment.
 
 ### Miscellaneous
 
-#### `lint`
+#### `lint:go`
 
 ```shell
-mage lint
+mage lint:go
 ```
 
 Performs static analysis of a Go file.
+
+#### `diff:tabledoc`
+
+```shell
+mage diff:tabledoc
+```
+
+Displays the difference between the schema on the table and the generated documents.
 
 #### `generate:proto`
 

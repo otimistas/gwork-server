@@ -13,15 +13,15 @@ import (
 	"github.com/otimistas/gwork-server/magefiles/utils"
 )
 
-// Generate is mage namespace for code generation.
-type Generate mg.Namespace
+// Diff is mage namespace for code diff code.
+type Diff mg.Namespace
 
-// Tabledoc generates table document codes.
-func (s Generate) Tabledoc(ctx context.Context) {
+// Tabledoc diff table schema and table document.
+func (s Diff) Tabledoc(ctx context.Context) {
 	mg.CtxDeps(ctx, s.tabledoc)
 }
 
-func (s Generate) tabledoc() error {
+func (s Diff) tabledoc() error {
 	repoRoot, err := utils.RepoRoot()
 	if err != nil {
 		return fmt.Errorf("get repo root: %w", err)
@@ -42,8 +42,8 @@ func (s Generate) tabledoc() error {
 		"TBLS_DOC_PATH": docDir,
 	}
 
-	if err := sh.RunWithV(env, "tbls", "doc", "--rm-dist"); err != nil {
-		return fmt.Errorf("run generate table document: %w", err)
+	if err := sh.RunWithV(env, "tbls", "diff"); err != nil {
+		return fmt.Errorf("run diff table document: %w", err)
 	}
 
 	return nil
