@@ -45,6 +45,27 @@ There are two ways to execute commands from within a container.
 
 It is recommended that the commands to be executed be done through [defined tasks](../contents/task.md).
 
+When the OS is Linux, it is convenient to use the `container_mage.sh` shell script to execute the generate command from within the container,
+ since the file is created with root privileges when generated in the container.
+
+To use it, grant execution permission with the following command.
+
+```shell
+sudo chmod a+x container_mage.sh
+```
+
+An example of its use is shown below.
+
+```shell
+./container_mage generate:tabledoc
+```
+
+Even if the files are created in the container without going through this script, the owner of all files under the working directory becomes the executing user by using the following command in the local environment.
+
+```shell
+mage chmod
+```
+
 - Run by command<br>
   As an example, consider execution from the app container.<br>
   It is important to note that when environment variables are used on a command, they are expanded before they enter the container.<br>

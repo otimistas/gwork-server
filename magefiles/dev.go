@@ -31,7 +31,9 @@ func dev() error {
 		return fmt.Errorf("get debugging port: %w", err)
 	}
 
-	env := map[string]string{}
+	env := map[string]string{
+		"GOFLAGS": "-buildvcs=false",
+	}
 
 	if err := sh.RunWithV(env, "arelo",
 		"-t", repoRoot,

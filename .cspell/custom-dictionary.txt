@@ -1,6 +1,7 @@
 # Custom Dictionary Words
 aquaproj
 arelo
+buildvcs
 caarlos
 codespace
 Codespaces
@@ -11,6 +12,7 @@ exiasr
 fakeclock
 faketime
 godotenv
+GOFLAGS
 golangci
 gomnd
 gopath
@@ -28,8 +30,8 @@ NOCASE
 ossp
 Otimista
 otimistas
-postgresql
 pkey
+postgresql
 proto
 protoc
 randomblob
