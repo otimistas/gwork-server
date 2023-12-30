@@ -8,12 +8,10 @@ linters:
   disable-all: true
   # Enable specific linter
   enable:
-    # go vet
-    - govet
+    # alter golint
+    - revive
     # res.body close
     - bodyclose
-    # Report unused functions and variables
-    - deadcode
     # Report when error return value is not acknowledged
     - errorlint
     # Check exhaustiveness of enum switch statements
@@ -33,8 +31,6 @@ linters:
     # It will give you some patterns of code that you don't need
     - gosimple
     # Checks that your code uses short syntax for if-statements whenever possible
-    - ifshort
-    # Report where unnecessary substitutions are made
     - ineffassign
     # Reports long lines
     - lll
@@ -48,8 +44,6 @@ linters:
     - sqlclosecheck
     # Staticcheck is a go vet on steroids, applying a ton of static analysis checks
     - staticcheck
-    # Report unused fields
-    - structcheck
     # Stylecheck is a replacement for golint
     - stylecheck
     # Check if compilation passes
@@ -58,8 +52,6 @@ linters:
     - unparam
     # Report unused variables, constants, functions, types, etc
     - unused
-    # Report unused global variables and constants
-    - varcheck
     # Tool for detection of leading and trailing whitespace
     - whitespace
     # Checks that errors returned from external packages are wrapped
@@ -88,6 +80,36 @@ linters-settings:
     local-prefixes: github.com/otimistas/gwork-server
   govet:
     enable-all: true
+  revive:
+    rules:
+      # golint equivalent rules
+      # https://github.com/mgechev/revive#available-rules
+      - name: blank-imports
+      - name: context-as-argument
+      - name: context-keys-type
+      - name: dot-imports
+      - name: error-return
+      - name: error-strings
+      - name: error-naming
+      - name: exported
+      - name: if-return
+      - name: increment-decrement
+      - name: var-naming
+      - name: var-declaration
+      - name: package-comments
+      - name: range
+      - name: receiver-naming
+      - name: time-naming
+      - name: unexported-return
+      - name: indent-error-flow
+      - name: errorf
+      - name: empty-block
+      - name: superfluous-else
+      - name: unused-parameter
+      - name: unreachable-code
+      - name: redefines-builtin-id
+      # Additional rules to be enabled
+      - name: use-any
   stylecheck:
     checks:
       - all
