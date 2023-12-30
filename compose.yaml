@@ -1,6 +1,9 @@
 services:
   app:
-    image: golang:1.21
+    container_name: gwork-app
+    build:
+      context: .
+      dockerfile: sample-container/Dockerfile
     environment:
       PORT: 50051
       DB_HOST: db
@@ -11,16 +14,18 @@ services:
       DB_PASSWORD: password
       APP_DEBUG: true
       APP_ENV: development
+      DB_URL: postgres://postgres:password@db:5432/gwork?sslmode=disable # For Dockerfile
     volumes:
       - .:/app:ro,cached
     ports:
       - 50051:50051
     working_dir: /app
-    command: go run main.go
+    command: go run main.go # TODO: Change to the command for hot reloading
     depends_on:
       - db
   db:
-    image: postgres:latest
+    container_name: gwork-db
+    image: postgres:14
     ports:
       - "5432:5432"
     environment:

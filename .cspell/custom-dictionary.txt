@@ -24,6 +24,7 @@ otimistas
 pgsql
 pkey
 proto
+protoc
 randomblob
 shardulm
 shellcheck
