@@ -1,3 +1,9 @@
+// Package config Reads environment variables and creates structures.
+//
+// The generated structure guarantees the type,
+// so when environment variables are used in the application,
+// they are called through this structure.
+// The structure can also have an initial value or be a required field.
 package config
 
 import (
@@ -22,7 +28,7 @@ type Config struct {
 
 	AppDebug bool `env:"APP_DEBUG"`
 	// development, staging, production
-	AppEnv Environment `env:"APP_ENV" envDefault:"production"`
+	AppEnv EnvironmentMode `env:"APP_ENV" envDefault:"production"`
 	// FakeTime Fake time mode setting
 	// If a time is specified, fix to that time.
 	// If a truthy value is specified, fix to the default time.
@@ -34,6 +40,7 @@ var parseFuncMap = map[reflect.Type]env.ParserFunc{
 	reflect.TypeOf(FakeTimeMode{}): parseFakeTimeMode,
 }
 
+// Get Get application settings from environment variables.
 func Get() (*Config, error) {
 	cfg := &Config{}
 	if err := env.ParseWithOptions(cfg, env.Options{FuncMap: parseFuncMap}); err != nil {

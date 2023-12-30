@@ -1,3 +1,7 @@
+// Package clock Define the clock interface to be used in the application.
+//
+// When using time.Now() in an application, the functionality of
+// the clock package can be used to switch externally to fakeclock, etc.
 package clock
 
 import "time"

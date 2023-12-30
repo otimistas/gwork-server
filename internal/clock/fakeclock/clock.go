@@ -1,3 +1,6 @@
+// Package fakeclock Defines a fake clock that implements the clock package
+//
+// Use this if you want to fix the time for a dummy or specify it explicitly.
 package fakeclock
 
 import (
@@ -9,27 +12,27 @@ import (
 
 var _ clock.Clock = (*Clock)(nil)
 
-// Clock 固定の時刻を返す clock.Clock 実装。
+// Clock implementation that returns a fixed time.
 type Clock struct {
 	mu  sync.RWMutex
 	now time.Time
 }
 
-// New 指定した時刻で固定された Clock を生成して返す。
+// New Generates and returns a Clock fixed at the specified time.
 func New(t time.Time) *Clock {
 	return &Clock{
 		now: t,
 	}
 }
 
-// Now 固定された時刻を返す。
+// Now Returns a fixed time.
 func (s *Clock) Now() time.Time {
 	s.mu.RLock()
 	defer s.mu.RUnlock()
 	return s.now
 }
 
-// SetTime 時刻を指定した値に変更する。
+// SetTime Change the time to the specified value.
 func (s *Clock) SetTime(t time.Time) {
 	s.mu.Lock()
 	defer s.mu.Unlock()
