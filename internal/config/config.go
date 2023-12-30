@@ -15,7 +15,8 @@ import (
 
 // Config A structure representing the application settings.
 type Config struct {
-	Port int `env:"PORT" envDefault:"50051"`
+	Port          int `env:"PORT" envDefault:"50051"`
+	DebuggingPort int `env:"DEBUGGING_PORT" envDefault:"2345"`
 	// mysql, pgsql, sqlite
 	DBConnection string `env:"DB_CONNECTION" envDefault:"pgsql"`
 	DBHost       string `env:"DB_HOST" envDefault:"localhost"`

@@ -11,6 +11,7 @@ There are two ways to set environment variables.
 | `APP_ENV` | production, staging, test, development | Indicates the current environment.
  | ✕ | production |
 | `PORT` | {number} | Indicates the port number of the grpc server. | ✕ | 50051 |
+| `DEBUGGING_PORT` | {number} | Indicates the port number for debugging. | ✕ | 2345 |
 
 ## Database Settings
 
