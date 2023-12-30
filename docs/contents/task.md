@@ -150,6 +150,17 @@ mage generate:proto
 
 Generate Go files under `/pb` according to the contents of the file `/proto/*.proto`.
 
+#### `generate:tabledoc`
+
+```shell
+mage generate:tabledoc
+```
+
+Create a document based on the table.
+Note that this command can only be executed from an environment that can connect to the database.
+
+The generated document will be output under `/docs/schema`.
+
 #### `generate:migration ${file}`
 
 ```shell
