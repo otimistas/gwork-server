@@ -1,6 +1,7 @@
 CREATE TABLE t_group_storage_permission (
     storage_id BINARY(16) NOT NULL,
     group_id BINARY(16) NOT NULL,
+	access_permission_id BINARY(16) NOT NULL,
     attached_by BINARY(16) NULL,
     last_changed_by BINARY(16) NULL,
     attached_at TIMESTAMP NOT NULL,
@@ -8,6 +9,7 @@ CREATE TABLE t_group_storage_permission (
     PRIMARY KEY (storage_id, group_id),
     CONSTRAINT fk_group_storage_permission_storage_id FOREIGN KEY (storage_id) REFERENCES m_storages(id) ON UPDATE CASCADE ON DELETE CASCADE,
     CONSTRAINT fk_group_storage_permission_group_id FOREIGN KEY (group_id) REFERENCES m_groups(id) ON UPDATE CASCADE ON DELETE CASCADE,
+	CONSTRAINT fk_group_storage_access_permission_id FOREIGN KEY (access_permission_id) REFERENCES m_storage_access_permissions(id) ON UPDATE RESTRICT ON DELETE RESTRICT,
     CONSTRAINT fk_storage_attached_by FOREIGN KEY (attached_by) REFERENCES m_users(id) ON UPDATE SET NULL ON DELETE SET NULL,
     CONSTRAINT fk_storage_last_changed_by FOREIGN KEY (last_changed_by) REFERENCES m_users(id) ON UPDATE SET NULL ON DELETE SET NULL
 );

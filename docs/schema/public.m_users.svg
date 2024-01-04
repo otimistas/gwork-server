@@ -278,43 +278,46 @@
 <!-- public.t_group_storage_permission -->
 <g id="node8" class="node">
 <title>public.t_group_storage_permission</title>
-<polygon fill="#efefef" stroke="transparent" points="2699,-700.5 2699,-735.5 3120,-735.5 3120,-700.5 2699,-700.5"/>
-<polygon fill="none" stroke="#000000" points="2699,-700.5 2699,-735.5 3120,-735.5 3120,-700.5 2699,-700.5"/>
-<text text-anchor="start" x="2705.6841" y="-713.3" font-family="Arial Bold" font-size="18.00" fill="#000000">public.t_group_storage_permission</text>
-<text text-anchor="start" x="2985.7479" y="-713.3" font-family="Arial" font-size="14.00" fill="#000000">    </text>
-<text text-anchor="start" x="3019.9527" y="-713.3" font-family="Arial" font-size="14.00" fill="#666666">[BASE TABLE]</text>
-<polygon fill="none" stroke="#000000" points="2699,-670.5 2699,-700.5 3120,-700.5 3120,-670.5 2699,-670.5"/>
-<text text-anchor="start" x="2706" y="-681.9" font-family="Arial" font-size="14.00" fill="#000000">storage_id    </text>
-<text text-anchor="start" x="2805.5582" y="-681.9" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
-<polygon fill="none" stroke="#000000" points="2699,-640.5 2699,-670.5 3120,-670.5 3120,-640.5 2699,-640.5"/>
-<text text-anchor="start" x="2706" y="-651.9" font-family="Arial" font-size="14.00" fill="#000000">group_id    </text>
-<text text-anchor="start" x="2794.6676" y="-651.9" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
-<polygon fill="none" stroke="#000000" points="2699,-610.5 2699,-640.5 3120,-640.5 3120,-610.5 2699,-610.5"/>
-<text text-anchor="start" x="2706" y="-621.9" font-family="Arial" font-size="14.00" fill="#000000">attached_by    </text>
-<text text-anchor="start" x="2816.4642" y="-621.9" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
-<polygon fill="none" stroke="#000000" points="2699,-580.5 2699,-610.5 3120,-610.5 3120,-580.5 2699,-580.5"/>
-<text text-anchor="start" x="2706" y="-591.9" font-family="Arial" font-size="14.00" fill="#000000">last_changed_by    </text>
-<text text-anchor="start" x="2846.028" y="-591.9" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
-<polygon fill="none" stroke="#000000" points="2699,-550.5 2699,-580.5 3120,-580.5 3120,-550.5 2699,-550.5"/>
-<text text-anchor="start" x="2706" y="-561.9" font-family="Arial" font-size="14.00" fill="#000000">attached_at    </text>
-<text text-anchor="start" x="2813.3548" y="-561.9" font-family="Arial" font-size="14.00" fill="#666666">[timestamp with time zone]</text>
-<polygon fill="none" stroke="#000000" points="2699,-520.5 2699,-550.5 3120,-550.5 3120,-520.5 2699,-520.5"/>
-<text text-anchor="start" x="2706" y="-531.9" font-family="Arial" font-size="14.00" fill="#000000">last_changed_at    </text>
-<text text-anchor="start" x="2842.9186" y="-531.9" font-family="Arial" font-size="14.00" fill="#666666">[timestamp with time zone]</text>
+<polygon fill="#efefef" stroke="transparent" points="2699,-715.5 2699,-750.5 3120,-750.5 3120,-715.5 2699,-715.5"/>
+<polygon fill="none" stroke="#000000" points="2699,-715.5 2699,-750.5 3120,-750.5 3120,-715.5 2699,-715.5"/>
+<text text-anchor="start" x="2705.6841" y="-728.3" font-family="Arial Bold" font-size="18.00" fill="#000000">public.t_group_storage_permission</text>
+<text text-anchor="start" x="2985.7479" y="-728.3" font-family="Arial" font-size="14.00" fill="#000000">    </text>
+<text text-anchor="start" x="3019.9527" y="-728.3" font-family="Arial" font-size="14.00" fill="#666666">[BASE TABLE]</text>
+<polygon fill="none" stroke="#000000" points="2699,-685.5 2699,-715.5 3120,-715.5 3120,-685.5 2699,-685.5"/>
+<text text-anchor="start" x="2706" y="-696.9" font-family="Arial" font-size="14.00" fill="#000000">storage_id    </text>
+<text text-anchor="start" x="2805.5582" y="-696.9" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
+<polygon fill="none" stroke="#000000" points="2699,-655.5 2699,-685.5 3120,-685.5 3120,-655.5 2699,-655.5"/>
+<text text-anchor="start" x="2706" y="-666.9" font-family="Arial" font-size="14.00" fill="#000000">group_id    </text>
+<text text-anchor="start" x="2794.6676" y="-666.9" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
+<polygon fill="none" stroke="#000000" points="2699,-625.5 2699,-655.5 3120,-655.5 3120,-625.5 2699,-625.5"/>
+<text text-anchor="start" x="2706" y="-636.9" font-family="Arial" font-size="14.00" fill="#000000">access_permission_id    </text>
+<text text-anchor="start" x="2877.8892" y="-636.9" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
+<polygon fill="none" stroke="#000000" points="2699,-595.5 2699,-625.5 3120,-625.5 3120,-595.5 2699,-595.5"/>
+<text text-anchor="start" x="2706" y="-606.9" font-family="Arial" font-size="14.00" fill="#000000">attached_by    </text>
+<text text-anchor="start" x="2816.4642" y="-606.9" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
+<polygon fill="none" stroke="#000000" points="2699,-565.5 2699,-595.5 3120,-595.5 3120,-565.5 2699,-565.5"/>
+<text text-anchor="start" x="2706" y="-576.9" font-family="Arial" font-size="14.00" fill="#000000">last_changed_by    </text>
+<text text-anchor="start" x="2846.028" y="-576.9" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
+<polygon fill="none" stroke="#000000" points="2699,-535.5 2699,-565.5 3120,-565.5 3120,-535.5 2699,-535.5"/>
+<text text-anchor="start" x="2706" y="-546.9" font-family="Arial" font-size="14.00" fill="#000000">attached_at    </text>
+<text text-anchor="start" x="2813.3548" y="-546.9" font-family="Arial" font-size="14.00" fill="#666666">[timestamp with time zone]</text>
+<polygon fill="none" stroke="#000000" points="2699,-505.5 2699,-535.5 3120,-535.5 3120,-505.5 2699,-505.5"/>
+<text text-anchor="start" x="2706" y="-516.9" font-family="Arial" font-size="14.00" fill="#000000">last_changed_at    </text>
+<text text-anchor="start" x="2842.9186" y="-516.9" font-family="Arial" font-size="14.00" fill="#666666">[timestamp with time zone]</text>
 </g>
 <!-- public.t_group_storage_permission&#45;&gt;public.m_users -->
 <g id="edge11" class="edge">
 <title>public.t_group_storage_permission:attached_by&#45;&gt;public.m_users:id</title>
-<path fill="none" stroke="#000000" d="M2689.0192,-624.8587C2618.2444,-614.9682 2707.0249,-493.1651 2647,-433 2567.9375,-353.7529 2272.9418,-300.5 2161,-300.5"/>
-<polygon fill="#000000" stroke="#000000" points="2689.0206,-624.8587 2698.7114,-629.9907 2694.0103,-625.1793 2699,-625.5 2699,-625.5 2699,-625.5 2694.0103,-625.1793 2699.2886,-621.0093 2689.0206,-624.8587 2689.0206,-624.8587"/>
-<text text-anchor="start" x="2705.706" y="-635.5" font-family="Arial" font-size="10.00" fill="#000000">FOREIGN KEY (attached_by) REFERENCES m_users(id) ON UPDATE SET NULL ON DELETE SET NULL</text>
+<path fill="none" stroke="#000000" d="M2688.9285,-609.7905C2624.4827,-599.8516 2703.0361,-487.9914 2647,-433 2567.1039,-354.5934 2272.9418,-300.5 2161,-300.5"/>
+<polygon fill="#000000" stroke="#000000" points="2689.0247,-609.7972 2698.6837,-614.9889 2694.0124,-610.1486 2699,-610.5 2699,-610.5 2699,-610.5 2694.0124,-610.1486 2699.3163,-606.0111 2689.0247,-609.7972 2689.0247,-609.7972"/>
+<text text-anchor="start" x="2458.706" y="-594.5" font-family="Arial" font-size="10.00" fill="#000000">FOREIGN KEY (attached_by) REFERENCES m_users(id) ON UPDATE SET NULL ON DELETE SET NULL</text>
 </g>
 <!-- public.t_group_storage_permission&#45;&gt;public.m_users -->
 <g id="edge12" class="edge">
 <title>public.t_group_storage_permission:last_changed_by&#45;&gt;public.m_users:id</title>
-<path fill="none" stroke="#000000" d="M2688.9632,-594.7323C2630.5283,-584.8893 2699.0998,-482.8794 2647,-433 2566.1409,-355.5869 2272.9418,-300.5 2161,-300.5"/>
-<polygon fill="#000000" stroke="#000000" points="2689.0291,-594.7373 2698.6568,-599.9869 2694.0146,-595.1186 2699,-595.5 2699,-595.5 2699,-595.5 2694.0146,-595.1186 2699.3432,-591.0131 2689.0291,-594.7373 2689.0291,-594.7373"/>
-<text text-anchor="start" x="2319.8975" y="-579.5" font-family="Arial" font-size="10.00" fill="#000000">FOREIGN KEY (last_changed_by) REFERENCES m_users(id) ON UPDATE SET NULL ON DELETE SET NULL</text>
+<path fill="none" stroke="#000000" d="M2688.7914,-579.6263C2636.6161,-569.702 2695.1226,-477.7421 2647,-433 2565.018,-356.7771 2272.9418,-300.5 2161,-300.5"/>
+<polygon fill="#000000" stroke="#000000" points="2689.0364,-579.6472 2698.6162,-584.9836 2694.0182,-580.0736 2699,-580.5 2699,-580.5 2699,-580.5 2694.0182,-580.0736 2699.3838,-576.0164 2689.0364,-579.6472 2689.0364,-579.6472"/>
+<text text-anchor="start" x="2319.8975" y="-564.5" font-family="Arial" font-size="10.00" fill="#000000">FOREIGN KEY (last_changed_by) REFERENCES m_users(id) ON UPDATE SET NULL ON DELETE SET NULL</text>
 </g>
 <!-- public.m_channels -->
 <g id="node9" class="node">

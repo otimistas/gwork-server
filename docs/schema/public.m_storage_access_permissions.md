@@ -6,7 +6,7 @@
 
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
-| id | uuid | uuid_generate_v4() | false |  |  |  |
+| id | uuid | uuid_generate_v4() | false | [public.t_group_storage_permission](public.t_group_storage_permission.md) |  |  |
 | mode | character(3) |  | false |  |  |  |
 
 ## Constraints

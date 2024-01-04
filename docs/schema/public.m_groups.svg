@@ -157,36 +157,39 @@
 <!-- public.t_group_storage_permission -->
 <g id="node4" class="node">
 <title>public.t_group_storage_permission</title>
-<polygon fill="#efefef" stroke="transparent" points="1009,-1097.5 1009,-1132.5 1430,-1132.5 1430,-1097.5 1009,-1097.5"/>
-<polygon fill="none" stroke="#000000" points="1009,-1097.5 1009,-1132.5 1430,-1132.5 1430,-1097.5 1009,-1097.5"/>
-<text text-anchor="start" x="1015.6841" y="-1110.3" font-family="Arial Bold" font-size="18.00" fill="#000000">public.t_group_storage_permission</text>
-<text text-anchor="start" x="1295.7479" y="-1110.3" font-family="Arial" font-size="14.00" fill="#000000">    </text>
-<text text-anchor="start" x="1329.9527" y="-1110.3" font-family="Arial" font-size="14.00" fill="#666666">[BASE TABLE]</text>
-<polygon fill="none" stroke="#000000" points="1009,-1067.5 1009,-1097.5 1430,-1097.5 1430,-1067.5 1009,-1067.5"/>
-<text text-anchor="start" x="1016" y="-1078.9" font-family="Arial" font-size="14.00" fill="#000000">storage_id    </text>
-<text text-anchor="start" x="1115.5582" y="-1078.9" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
-<polygon fill="none" stroke="#000000" points="1009,-1037.5 1009,-1067.5 1430,-1067.5 1430,-1037.5 1009,-1037.5"/>
-<text text-anchor="start" x="1016" y="-1048.9" font-family="Arial" font-size="14.00" fill="#000000">group_id    </text>
-<text text-anchor="start" x="1104.6676" y="-1048.9" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
-<polygon fill="none" stroke="#000000" points="1009,-1007.5 1009,-1037.5 1430,-1037.5 1430,-1007.5 1009,-1007.5"/>
-<text text-anchor="start" x="1016" y="-1018.9" font-family="Arial" font-size="14.00" fill="#000000">attached_by    </text>
-<text text-anchor="start" x="1126.4642" y="-1018.9" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
-<polygon fill="none" stroke="#000000" points="1009,-977.5 1009,-1007.5 1430,-1007.5 1430,-977.5 1009,-977.5"/>
-<text text-anchor="start" x="1016" y="-988.9" font-family="Arial" font-size="14.00" fill="#000000">last_changed_by    </text>
-<text text-anchor="start" x="1156.028" y="-988.9" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
-<polygon fill="none" stroke="#000000" points="1009,-947.5 1009,-977.5 1430,-977.5 1430,-947.5 1009,-947.5"/>
-<text text-anchor="start" x="1016" y="-958.9" font-family="Arial" font-size="14.00" fill="#000000">attached_at    </text>
-<text text-anchor="start" x="1123.3548" y="-958.9" font-family="Arial" font-size="14.00" fill="#666666">[timestamp with time zone]</text>
-<polygon fill="none" stroke="#000000" points="1009,-917.5 1009,-947.5 1430,-947.5 1430,-917.5 1009,-917.5"/>
-<text text-anchor="start" x="1016" y="-928.9" font-family="Arial" font-size="14.00" fill="#000000">last_changed_at    </text>
-<text text-anchor="start" x="1152.9186" y="-928.9" font-family="Arial" font-size="14.00" fill="#666666">[timestamp with time zone]</text>
+<polygon fill="#efefef" stroke="transparent" points="1009,-1112.5 1009,-1147.5 1430,-1147.5 1430,-1112.5 1009,-1112.5"/>
+<polygon fill="none" stroke="#000000" points="1009,-1112.5 1009,-1147.5 1430,-1147.5 1430,-1112.5 1009,-1112.5"/>
+<text text-anchor="start" x="1015.6841" y="-1125.3" font-family="Arial Bold" font-size="18.00" fill="#000000">public.t_group_storage_permission</text>
+<text text-anchor="start" x="1295.7479" y="-1125.3" font-family="Arial" font-size="14.00" fill="#000000">    </text>
+<text text-anchor="start" x="1329.9527" y="-1125.3" font-family="Arial" font-size="14.00" fill="#666666">[BASE TABLE]</text>
+<polygon fill="none" stroke="#000000" points="1009,-1082.5 1009,-1112.5 1430,-1112.5 1430,-1082.5 1009,-1082.5"/>
+<text text-anchor="start" x="1016" y="-1093.9" font-family="Arial" font-size="14.00" fill="#000000">storage_id    </text>
+<text text-anchor="start" x="1115.5582" y="-1093.9" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
+<polygon fill="none" stroke="#000000" points="1009,-1052.5 1009,-1082.5 1430,-1082.5 1430,-1052.5 1009,-1052.5"/>
+<text text-anchor="start" x="1016" y="-1063.9" font-family="Arial" font-size="14.00" fill="#000000">group_id    </text>
+<text text-anchor="start" x="1104.6676" y="-1063.9" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
+<polygon fill="none" stroke="#000000" points="1009,-1022.5 1009,-1052.5 1430,-1052.5 1430,-1022.5 1009,-1022.5"/>
+<text text-anchor="start" x="1016" y="-1033.9" font-family="Arial" font-size="14.00" fill="#000000">access_permission_id    </text>
+<text text-anchor="start" x="1187.8892" y="-1033.9" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
+<polygon fill="none" stroke="#000000" points="1009,-992.5 1009,-1022.5 1430,-1022.5 1430,-992.5 1009,-992.5"/>
+<text text-anchor="start" x="1016" y="-1003.9" font-family="Arial" font-size="14.00" fill="#000000">attached_by    </text>
+<text text-anchor="start" x="1126.4642" y="-1003.9" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
+<polygon fill="none" stroke="#000000" points="1009,-962.5 1009,-992.5 1430,-992.5 1430,-962.5 1009,-962.5"/>
+<text text-anchor="start" x="1016" y="-973.9" font-family="Arial" font-size="14.00" fill="#000000">last_changed_by    </text>
+<text text-anchor="start" x="1156.028" y="-973.9" font-family="Arial" font-size="14.00" fill="#666666">[uuid]</text>
+<polygon fill="none" stroke="#000000" points="1009,-932.5 1009,-962.5 1430,-962.5 1430,-932.5 1009,-932.5"/>
+<text text-anchor="start" x="1016" y="-943.9" font-family="Arial" font-size="14.00" fill="#000000">attached_at    </text>
+<text text-anchor="start" x="1123.3548" y="-943.9" font-family="Arial" font-size="14.00" fill="#666666">[timestamp with time zone]</text>
+<polygon fill="none" stroke="#000000" points="1009,-902.5 1009,-932.5 1430,-932.5 1430,-902.5 1009,-902.5"/>
+<text text-anchor="start" x="1016" y="-913.9" font-family="Arial" font-size="14.00" fill="#000000">last_changed_at    </text>
+<text text-anchor="start" x="1152.9186" y="-913.9" font-family="Arial" font-size="14.00" fill="#666666">[timestamp with time zone]</text>
 </g>
 <!-- public.t_group_storage_permission&#45;&gt;public.m_groups -->
 <g id="edge3" class="edge">
 <title>public.t_group_storage_permission:group_id&#45;&gt;public.m_groups:id</title>
-<path fill="none" stroke="#000000" d="M999.0624,-1050.4152C935.0771,-1021.3218 1006.0354,-697.5 1083,-697.5"/>
-<polygon fill="#000000" stroke="#000000" points="999.213,-1050.4467 1008.076,-1056.9041 1004.1065,-1051.4734 1009,-1052.5 1009,-1052.5 1009,-1052.5 1004.1065,-1051.4734 1009.924,-1048.0959 999.213,-1050.4467 999.213,-1050.4467"/>
-<text text-anchor="start" x="772.8805" y="-1036.5" font-family="Arial" font-size="10.00" fill="#000000">FOREIGN KEY (group_id) REFERENCES m_groups(id) ON UPDATE CASCADE ON DELETE CASCADE</text>
+<path fill="none" stroke="#000000" d="M999.0537,-1065.5093C931.527,-1036.3863 1002.7524,-697.5 1083,-697.5"/>
+<polygon fill="#000000" stroke="#000000" points="999.1945,-1065.5374 1008.1168,-1071.9125 1004.0972,-1066.5187 1009,-1067.5 1009,-1067.5 1009,-1067.5 1004.0972,-1066.5187 1009.8832,-1063.0875 999.1945,-1065.5374 999.1945,-1065.5374"/>
+<text text-anchor="start" x="772.8805" y="-1051.5" font-family="Arial" font-size="10.00" fill="#000000">FOREIGN KEY (group_id) REFERENCES m_groups(id) ON UPDATE CASCADE ON DELETE CASCADE</text>
 </g>
 <!-- public.m_channels -->
 <g id="node5" class="node">

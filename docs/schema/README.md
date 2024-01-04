@@ -17,7 +17,7 @@
 | [public.t_user_group_permission](public.t_user_group_permission.md) | 4 |  | BASE TABLE |
 | [public.m_storage_access_permissions](public.m_storage_access_permissions.md) | 2 |  | BASE TABLE |
 | [public.m_storages](public.m_storages.md) | 6 |  | BASE TABLE |
-| [public.t_group_storage_permission](public.t_group_storage_permission.md) | 6 |  | BASE TABLE |
+| [public.t_group_storage_permission](public.t_group_storage_permission.md) | 7 |  | BASE TABLE |
 | [public.m_channels](public.m_channels.md) | 9 |  | BASE TABLE |
 | [public.t_user_channel](public.t_user_channel.md) | 4 |  | BASE TABLE |
 | [public.t_chats](public.t_chats.md) | 5 |  | BASE TABLE |
