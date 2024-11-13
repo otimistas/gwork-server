@@ -1,0 +1,68 @@
+{
+  "name": "Gwork Server",
+  "dockerComposeFile": ["compose.yaml"],
+  "service": "dev",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "go.toolsManagement.checkForUpdates": "local",
+        "go.gopath": "/go",
+        "redhat.telemetry.enabled": false
+      },
+      "extensions": [
+        "golang.go",
+        "streetsidesoftware.code-spell-checker",
+        "aaron-bond.better-comments",
+        "shardulm94.trailing-spaces",
+        "zxh404.vscode-proto3",
+        "mikestead.dotenv",
+        "redhat.vscode-yaml",
+        "editorconfig.editorconfig",
+        "exiasr.hadolint",
+        "timonwong.shellcheck",
+        "esbenp.prettier-vscode",
+        "zxh404.vscode-proto3"
+      ]
+    }
+  },
+  "forwardPorts": [
+    // server
+    50051
+  ],
+  "portsAttributes": {
+    "2345": {
+      "label": "delve",
+      "onAutoForward": "ignore"
+    },
+    "50051": {
+      "label": "server",
+      "protocol": "http"
+    }
+  },
+  "postCreateCommand": "aqua policy allow && aqua i && mage init",
+  "remoteUser": "vscode",
+  "remoteEnv": {
+    // vscode-go overwrites the PATH, so aqua is further overridden to take precedence.
+    "PATH": "${containerEnv:AQUA_ROOT_DIR}/bin:${containerEnv:PATH}",
+    "PORT": "50051",
+    "DB_HOST": "localhost",
+    "DB_CONNECTION": "postgresql",
+    "DB_PORT": "5432",
+    "DB_NAME": "gwork",
+    "DB_USERNAME": "postgres",
+    "DB_PASSWORD": "password",
+    "APP_DEBUG": "true",
+    "APP_ENV": "development",
+    "DB_URL": "postgres://postgres:password@localhost:5432/gwork?sslmode=disable"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+      "version": "latest",
+      "dockerDashComposeVersion": "v2"
+    },
+    "ghcr.io/devcontainers/features/git:1": {
+      "version": "latest"
+    }
+  }
+}

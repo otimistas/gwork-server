@@ -6,7 +6,9 @@ caarlos
 codespace
 Codespaces
 commandline
+dbrepo
 devcontainers
+entityrepo
 esbenp
 exiasr
 fakeclock
@@ -21,6 +23,7 @@ gosec
 gwork
 hadolint
 Inclusivity
+jackc
 joho
 magefile
 magefiles
@@ -30,6 +33,9 @@ NOCASE
 ossp
 Otimista
 otimistas
+pgadapter
+pgquery
+pgtype
 pkey
 postgresql
 proto
@@ -40,6 +46,7 @@ shellcheck
 shirou
 sqlc
 sslmode
+stdlib
 Tabledoc
 TASKKILL
 tbls

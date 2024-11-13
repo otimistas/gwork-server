@@ -1,0 +1,24 @@
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gwork-dev-app
+    init: true
+    volumes:
+      - ..:/workspace:cached
+    command: sleep infinity
+    network_mode: service:db
+  db:
+    image: postgres:14
+    container_name: gwork-dev-db
+    restart: unless-stopped
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=gwork
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:

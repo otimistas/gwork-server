@@ -24,7 +24,8 @@ go.work
 .env
 
 # storage
-storage/**
+storage/*
+!storage/.gitkeep
 
 # Go
 __debug_bin*
